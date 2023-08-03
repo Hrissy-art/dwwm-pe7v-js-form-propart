@@ -7,6 +7,104 @@
         <title>Formulaire Pro-Particulier</title>
     </head>
     <body>
+        <section id="accompany">
+            <form method="post">
+                <h2>Entreprise</h2>
+                <!-- raison sociale -->
+                <label for="reason">Raison sociale:</label>
+                <input type="text" id="reason" name="reason" required />
+                <br />
+                <!-- numéro de siren/siret -->
+                <label>Numéro de SIREN ou SIRET:</label>
+                <div>
+                    <input
+                        type="radio"
+                        id="siren"
+                        name="siren_siret"
+                        value="siren"
+                    />
+                    <label for="siren">SIREN</label>
+                    <input
+                        type="text"
+                        id="siren_input"
+                        name="siren"
+                        pattern="[0-9]{9}"
+                    />
+                </div>
+                <div>
+                    <input
+                        type="radio"
+                        id="siret"
+                        name="siren_siret"
+                        value="siret"
+                    />
+                    <label for="siret">SIRET</label>
+                    <input
+                        type="text"
+                        id="siret_input"
+                        name="siret"
+                        pattern="[0-9]{14}"
+                    />
+                </div>
+                <br />
+                <!-- mail -->
+                <label for="email">Email:</label>
+                <input type="email" id="company_email" name="email" required />
+                <br />
+                <!-- tél -->
+                <label for="tel">Téléphone:</label>
+                <input type="tel" id="company_tel" name="tel" required />
+                <br />
+                <!-- adresse postale -->
+                <label for="address">Adresse:</label>
+                <input type="text" id="address" name="address" required />
+                <br />
+                <label for="postal_code">Code postal:</label>
+                <input
+                    type="text"
+                    id="postal_code"
+                    name="postal_code"
+                    size="5"
+                    required
+                />
+                <br />
+                <label for="city">Ville:</label>
+                <input type="text" id="city" name="city" required />
+                <br />
+                <!-- numéro de TVA -->
+                <label for="tva">Numéro de TVA intracommunautaire:</label>
+                <input
+                    type="text"
+                    id="tva"
+                    name="tva"
+                    pattern="FR[0-9]{2}[0-9]{9}"
+                />
+                <br />
+                <!-- case à cocher pour accepter CGV -->
+                <input
+                    type="checkbox"
+                    id="accept_cgv"
+                    name="accept_cgv"
+                    required
+                />
+                <label for="accept_cgv">J'accepter les CGV</label>
+                <br />
+                <!-- case à cocher pour accepter les communications commerciales -->
+                <input
+                    type="checkbox"
+                    id="accept_condition"
+                    name="accept_condition"
+                    required
+                />
+                <label for="accept_condition"
+                    >J'accepter les communications commerciales</label
+                >
+                <br />
+                <!-- envoyer -->
+                <input type="submit" value="Envoyer" />
+            </form>
+        </section>
+
         <script src="./_js/utils.js"></script>
     </body>
 </html>
