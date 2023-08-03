@@ -7,6 +7,111 @@
         <title>Formulaire Pro-Particulier</title>
     </head>
     <body>
+        <section>
+            <form method="post">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required />
+                <br />
+                <label for="surname">Prénom:</label>
+                <input type="text" id="surname" name="surname" required />
+                <br />
+                <label for="gender">Genre:</label>
+
+                <select name="genre" id="genre">
+                    <option value="">--Choix--</option>
+                    <option value="woman">Femme</option>
+                    <option value="man">Homme</option>
+                    <option value="other">Autre</option>
+                </select>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+                <br />
+
+                <label for="street-address">Adresse postale:</label>
+                <input
+                    type="text"
+                    id="street-address"
+                    name="street-address"
+                    required
+                />
+                <br />
+                <label for="postal-code">Code postale:</label>
+
+                <input
+                    type="number"
+                    id="postal-code"
+                    name="tentacles"
+                    min="5"
+                    max="5"
+                />
+                <br />
+
+                <!-- <label for="phone">Entrez votre numéro de portable:</label>
+    
+                <input type="tel" id="phone" name="phone" pattern="0000000000" required />
+                <br />
+    
+                <label for="phone">Entrez votre numéro de téléphone:</label>
+    
+                <input type="tel" id="phone" name="phone" pattern="0400000000" required />
+                <br /> -->
+
+                <label>Entrez votre numéro de téléphone:</label>
+                <div>
+                    <input
+                        type="radio"
+                        id="phone-mobile"
+                        name="phone-mobile"
+                        value="phone-mobile"
+                    />
+                    <label for="phone-mobile">Portable</label>
+                    <input
+                        type="tel"
+                        id="phone-mobile-input"
+                        name="phone-mobile-input"
+                        pattern="[0-9]{10}"
+                    />
+                </div>
+                <div>
+                    <input type="radio" id="phone" name="phone" value="phone" />
+                    <label for="phone">Téléphone fixe:</label>
+                    <input
+                        type="tel"
+                        id="phone-input"
+                        name="phone-input"
+                        pattern="[0-9]{10}"
+                    />
+                </div>
+
+                <label for="birthday">Date de naissance:</label>
+
+                <input
+                    type="date"
+                    id="birthday"
+                    name="birthay"
+                    value="2010-12-31"
+                    min="1930-01-01"
+                    max="2010-12-31"
+                />
+                <br />
+
+                <div>
+                    <input type="checkbox" id="terms" required />
+                    <label for="terms">J'ai lu et j'accepte les CGV.</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="terms" required />
+                    <label for="terms"
+                        >J'accepte les communications commerciales
+                    </label>
+                </div>
+
+                <input type="submit" value="Envoyer" />
+            </form>
+        </section>
+
+        <!-- ----------------------------------------------------------------------------- -->
         <section id="accompany">
             <form method="post">
                 <h2>Entreprise</h2>
@@ -104,7 +209,6 @@
                 <input type="submit" value="Envoyer" />
             </form>
         </section>
-
         <script src="./_js/utils.js"></script>
     </body>
 </html>
