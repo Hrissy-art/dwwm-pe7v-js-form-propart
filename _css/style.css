@@ -1,5 +1,36 @@
+/* style common */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+form {
+    margin-top: 20px;
+}
+form input {
+    margin: 10px 0;
+}
+
+/* 1. afficher les formulaire l'un ou l'autre en fonction du clique de l'utilisateur*/
+.active {
+    display: block;
+}
+#company {
+    display: none;
+}
+
+/*2. afficher un avertissement en rouge en cas de saisie incorrecte pour le code postal. */
+.warning_color {
+    color: red;
+    display: none;
+}
+
+/* 3. si l’utilisateur n’a pas coché la case pour accepter les CGV, il faut y remettre le focus et l’afficher en rouge */
+.warning_focus {
+    outline: 1px solid red;
 }
